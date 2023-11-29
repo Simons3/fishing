@@ -5,9 +5,9 @@ class Main{
   public static int row, col, catchCount = 0;
   //where the fish are hiding
   public static String[][] game = {{"~~~~~", "~~~~~", "~~~~~", "~~~~~", "><((>"},
-                                   {"~~~~~", "~~~~~", "~~~~~", "~~~~~", "~~~~~"},
+                                   {"~~~~~", "~~~~~", "><((>", "~~~~~", "~~~~~"},
                                    {"~~~~~", "><((>", "~~~~~", "~~~~~", "~~~~~"},
-                                   {"~~~~~", "~~~~~", "~~~~~", "~~~~~", "~~~~~"},
+                                   {"><((>", "~~~~~", "~~~~~", "~~~~~", "~~~~~"},
                                    {"~~~~~", "~~~~~", "~~~~~", "><((>", "~~~~~"}};
   //the gameboard the user sees
   public static String[][] lake = {{"    Y X  ", "  1   ", "   2  ", "   3  ", "   4  ", "   5  "},
@@ -18,14 +18,14 @@ class Main{
                                    {"    5    ", "~~~~~~", "~~~~~~", "~~~~~~", "~~~~~~", "~~~~~~"}};
   public static void main(String[] args){ 
     //keeps game running while all 3 fish haven't been caught
-    while(catchCount<3){
+    while(catchCount<5){
       System.out.print("\033\143");
       System.out.println("Go fishing!");
       printLake();
       guessCoordinates();
       checkGuess();
     }
-    //the while loop stops when all 3 are found
+    //the while loop stops when all 5 are found
     System.out.print("Great job! You caught your limit!");
   }
   public static void printLake(){
@@ -48,7 +48,7 @@ class Main{
       System.out.println("You  caught a fish!  ><((>");
       lake[row+1][col+1]= " ><((>";
       catchCount++;
-      System.out.println("Your catch count is "+ catchCount +". You need 3!");
+      System.out.println("Your catch count is "+ catchCount +". You need 5!");
     }else{
       System.out.println("~Empty Water~");
     }
