@@ -35,7 +35,7 @@ class Main{
       }
       System.out.println(); 
     }
-  }
+  }//hi there
   public static void guessCoordinates(){
     System.out.println("What coordinate would you like to fish?");
     System.out.print("X: ");
