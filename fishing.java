@@ -20,13 +20,13 @@ class Main{
     //keeps game running while all 3 fish haven't been caught
     while(catchCount<3){
       System.out.print("\033\143");
-      System.out.println("Go fishing!");
+      System.out.println("Go shoping");
       printLake();
       guessCoordinates();
       checkGuess();
     }
     //the while loop stops when all 3 are found
-    System.out.print("Great job! You caught your limit!");
+    System.out.print("what did you get");
   }
   public static void printLake(){
     for(int i = 0; i < 6; i++){
@@ -37,7 +37,7 @@ class Main{
     }
   }
   public static void guessCoordinates(){
-    System.out.println("What coordinate would you like to fish?");
+    System.out.println("were do you want to shop");
     System.out.print("X: ");
     col = input.nextInt()-1;
     System.out.print("Y: ");
@@ -45,12 +45,12 @@ class Main{
   }
   public static void checkGuess(){
     if(game[row][col].equals("><((>")){
-      System.out.println("You  caught a fish!  ><((>");
+      System.out.println("You  got a shirt  ><((>");
       lake[row+1][col+1]= " ><((>";
       catchCount++;
-      System.out.println("Your catch count is "+ catchCount +". You need 3!");
+      System.out.println("You have 1 shirt "+ catchCount +". You need 3!");
     }else{
-      System.out.println("~Empty Water~");
+      System.out.println("~full bag~");
     }
     input.nextLine();
     input.nextLine();
